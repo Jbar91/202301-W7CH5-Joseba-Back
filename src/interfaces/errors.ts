@@ -8,7 +8,7 @@ export class HTTPError extends Error implements CustomError {
     public statusCode: number,
     public statusMsg: string,
     public message: string,
-    public options: ErrorOptions
+    public options?: ErrorOptions
   ) {
     super(message, options);
     this.name = 'HTTPError';
