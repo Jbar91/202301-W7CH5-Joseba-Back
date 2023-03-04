@@ -20,10 +20,24 @@ const userSchema = new Schema<User>({
     required: true,
   },
   friends: {
-    type: [],
+    type: [
+      {
+        id: {
+          type: Schema.Types.ObjectId,
+          ref: 'User',
+        },
+      },
+    ],
   },
   enemies: {
-    type: [],
+    type: [
+      {
+        id: {
+          type: Schema.Types.ObjectId,
+          ref: 'User',
+        },
+      },
+    ],
   },
 });
 
